@@ -1,19 +1,22 @@
 import React from 'react'
 
+import Card from './UI/Card'
+import ScoreContainer from './ScoreContainer'
 import classes from './Header.module.css'
 
 const Header = () => {
     return (
-        <header>
-            <div>
-                <h2>
-                    <span>ROCK</span>
-                    <span>PAPER</span>
-                    <span>SCISSORS</span>
-                </h2>
+        <Card>
+        <header className={classes.header}>
+            <div className={classes.header__title__container}>
+                    <h2>ROCK</h2>
+                    <h2>PAPER</h2>
+                    <h2>SCISSORS</h2>
+            
             </div>
-            <div>SCORE COMPONENT HERE!</div>
+            <ScoreContainer />
         </header>
+        </Card>
     )
 }
 
