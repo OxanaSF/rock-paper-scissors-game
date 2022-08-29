@@ -4,7 +4,7 @@ import classes from './Game.module.css';
 
 const Game = () => {
   return (
-    <section className={classes.game__container}>
+    <main className={classes.game__container}>
       <div className={classes.game__paper__border}>
         <div className={classes.game__paper}>
           <img
@@ -29,7 +29,7 @@ const Game = () => {
           />
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

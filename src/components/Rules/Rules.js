@@ -7,7 +7,10 @@ import classes from './Rules.module.css'
 
 const Rules = () => {
     return (
-        <RulesBtn />
+        <section>
+            <RulesBtn />
+        </section>
+
     )
 }
 
