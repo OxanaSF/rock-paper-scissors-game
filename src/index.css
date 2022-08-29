@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(217, 16%, 45%);
+  padding-top: 0;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding-top: 10rem;
+  }
+}

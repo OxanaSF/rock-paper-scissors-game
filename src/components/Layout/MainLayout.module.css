@@ -1,0 +1,52 @@
+.main {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    #141539,
+    #151b3f,
+    #172144,
+    #19284a,
+    #1b2e4f,
+    #1b2e4f,
+    #1b2e4f,
+    #1b2e4f,
+    #19284a,
+    #172144,
+    #151b3f,
+    #141539
+  );
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    height: 70vh;
+    background-image: linear-gradient(
+      to right,
+      #141539,
+      #151b3f,
+      #172144,
+      #19284a,
+      #1b2e4f,
+      #1b2e4f,
+      #1b2e4f,
+      #1b2e4f,
+      #19284a,
+      #172144,
+      #151b3f,
+      #141539
+    );
+  }
+
+  div:nth-child(3) {
+    align-self: flex-end;
+  }
+}
