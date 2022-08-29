@@ -25,6 +25,10 @@
 
 @media only screen and (min-width: 768px) {
   .score {
-    width: 6rem;
+    width: 7rem;
+  }
+
+  .score__digit {
+    font-size: 3rem;
   }
 }

@@ -1,0 +1,45 @@
+.game__container {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-image: url('../../public/images/bg-triangle.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 50%;
+}
+
+.game__paper__border,
+.game__scissors__border,
+.game__rock__border {
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.game__paper__border {
+  background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.game__scissors__border {
+  background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.game__rock__border {
+  background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.game__paper,
+.game__scissors,
+.game__rock {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 50%;
+}
+
+img {
+  width: 3rem;
+  height: 3rem;
+}
