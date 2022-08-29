@@ -10,19 +10,16 @@
   padding-bottom: 7rem;
   color: white;
   background-image: linear-gradient(
-    to right,
+    to top,
+    #151b3f,
     #141539,
-    #151b3f,
     #172144,
     #19284a,
     #1b2e4f,
     #1b2e4f,
     #1b2e4f,
     #1b2e4f,
-    #19284a,
-    #172144,
-    #151b3f,
-    #141539
+    #19284a
   );
 }
 

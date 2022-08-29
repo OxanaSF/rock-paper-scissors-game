@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  background-image: url('../../public/images/bg-triangle.svg');
+  background-image: url('../../../public/images/bg-triangle.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

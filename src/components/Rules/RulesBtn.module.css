@@ -1,0 +1,13 @@
+.rules__btn {
+    background-color: transparent;
+    color: white;
+    padding: 0.8rem;
+    width: 9rem;
+    border: none;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+}

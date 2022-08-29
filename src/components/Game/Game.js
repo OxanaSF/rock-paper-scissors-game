@@ -4,9 +4,7 @@ import classes from './Game.module.css';
 
 const Game = () => {
   return (
-    <section className={classes.game__container}
-    // style={{ backgroundImage:`url(${process.env.PUBLIC_URL}/images/bg-triangle.svg)` }}
-    >
+    <section className={classes.game__container}>
       <div className={classes.game__paper__border}>
         <div className={classes.game__paper}>
           <img
