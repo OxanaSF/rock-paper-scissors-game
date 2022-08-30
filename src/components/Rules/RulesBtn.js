@@ -6,9 +6,14 @@ import classes from './RulesBtn.module.css'
 
 
 
-const RulesBtn = () => {
+
+
+const RulesBtn = (props) => {
     return (
-        <button className={classes.rules__btn}>
+        <button 
+            className={classes.rules__btn}
+            onClick={props.onClick}
+            >
             RULES
         </button>
     )
