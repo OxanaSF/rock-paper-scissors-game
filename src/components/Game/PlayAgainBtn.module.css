@@ -1,12 +1,14 @@
 .play__again_btn {
-    width: 16.5rem;
+  width: 16.5rem;
+  height: 3.3rem;
+  border-radius: 0.5rem;
+  border: none;
 }
 
-
 .play__again_btn h1 {
-    color: hsl(229, 25%, 31%);
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
+  color: hsl(229, 25%, 31%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
 }
