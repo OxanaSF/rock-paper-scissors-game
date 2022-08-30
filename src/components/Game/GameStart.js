@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import classes from './Game.module.css';
+import classes from './GameStart.module.css';
 
 const Game = () => {
+  const [userPick, setUserPick] = useState('')
+
   return (
     <main className={classes.game__container}>
+
+      <Link to='/game-result' >
       <div className={classes.game__paper__border}>
         <div className={classes.game__paper}>
           <img
@@ -13,6 +18,9 @@ const Game = () => {
           />
         </div>
       </div>
+      </Link>
+
+      <Link to='/game-result' >
       <div className={classes.game__scissors__border}>
         <div className={classes.game__scissors}>
           <img
@@ -21,6 +29,9 @@ const Game = () => {
           />
         </div>
       </div>
+      </Link>
+
+      <Link to='/game-result' >
       <div className={classes.game__rock__border}>
         <div className={classes.game__rock}>
           <img
@@ -29,6 +40,9 @@ const Game = () => {
           />
         </div>
       </div>
+      </Link>
+
+
     </main>
   );
 };

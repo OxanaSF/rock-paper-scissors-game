@@ -6,11 +6,10 @@ import classes from './RulesModal.module.css';
 
 export const ModalOverlay = (props) => {
   const content = (
-    // <div className={classes.modal__overlay__container}>
     <div className={classes.modal__overlay} onClick={props.onClick}>
       <h1>RULES</h1>
       <div className={classes.modal__header}>
-        <h2>RULES</h2>
+        <h1>RULES</h1>
         <div className={classes.modal__close}>
           <img
             src={`${process.env.PUBLIC_URL}/images/icon-close.svg`}
@@ -21,7 +20,7 @@ export const ModalOverlay = (props) => {
 
       <div className={classes.modal__overlay__image}></div>
     </div>
-    // </div>
+  
   );
 
   return createPortal(content, document.getElementById('rules-modal-root'));

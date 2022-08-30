@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Card from './UI/Card';
-import ScoreContainer from './ScoreContainer';
+import Card from '../UI/Card';
+import ScoreContainer from './ScoreContainer'
 import classes from './Header.module.css';
 
 const Header = () => {

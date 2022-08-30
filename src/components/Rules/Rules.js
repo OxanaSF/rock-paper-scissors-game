@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import RulesBtn from './RulesBtn';
 import RulesModal from './RulesModal';
-// import classes from './Rules.module.css';
+
 
 const Rules = () => {
   const [showModal, setShowModal] = useState(false);

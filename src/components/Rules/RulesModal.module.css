@@ -11,13 +11,13 @@
   background-repeat: no-repeat;
 }
 
-h1 {
+.modal__overlay h1 {
   color: hsl(229, 25%, 31%);
   text-align: center;
   margin-top: 7rem;
 }
 
-h2 {
+.modal__header h1 {
   visibility: hidden;
 }
 
@@ -55,12 +55,12 @@ h2 {
     margin: 0 2rem;
   }
 
-  h1 {
+  .modal__overlay h1 {
     visibility: hidden;
     margin: 0;
   }
 
-  h2 {
+  .modal__header h1 {
     visibility: visible;
     color: hsl(229, 25%, 31%);
     text-align: center;
