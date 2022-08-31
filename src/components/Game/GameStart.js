@@ -1,38 +1,51 @@
 import React, { useRef, Fragment } from 'react';
 
 import GameStartItem from './GameStartItem';
-import GameResult from './GameResult';
+// import GameResult from './GameResult';
 import classes from './GameStart.module.css';
 import { ROCK_PAPER_SCISSORS_ICONS } from '../../utils/rock_paper_scissors_icons';
+import GameResult from './GameResult';
 
 const Game = (props) => {
   let icon = useRef(null);
 
   const gameResultsHandler = (event) => {
+    const pickedByUser = event.currentTarget.id;
+
+    props.setUserPick(pickedByUser);
+
+
+    const pickedByUserNumber = pickedByUser.slice(-1) * 1;
+
     const random =
       Math.floor(Math.random() * ROCK_PAPER_SCISSORS_ICONS.length) + 1;
 
-    const pickedByUser = event.currentTarget.id;
-
-    if (pickedByUser === 'img1') {
-      props.setUserPick('paper');
-    }
-    if (pickedByUser === 'img2') {
-      props.setUserPick('scissors');
-    }
-    if (pickedByUser === 'img3') {
-      props.setUserPick('rock');
-    }
-
-    if (pickedByUser.slice(-1) * 1 > random) {
-      props.setGameResult('WIN');
-    } else if (pickedByUser.slice(-1) * 1 < random) {
-      props.setGameResult('YOU LOSE');
-    } else {
+    if (pickedByUserNumber === random) {
       props.setGameResult('DRAW');
+    } else if (
+      (props.userPick === 'img1' && random === 3) ||
+      (props.userPick === 'img2' && random === 1) ||
+      (props.userPick === 'img3' && random === 2)
+    ) {
+      props.setGameResult('YOU WIN');
+    } else if (
+      (props.userPick === 'img1' && random === 2) ||
+      (props.userPick === 'img2' && random === 3) ||
+      (props.userPick === 'img3' && random === 1)
+    ) {
+      props.setGameResult('YOU LOSE');
+    }
+
+    if (random === 1) {
+      props.setHousePick('img1');
+    } else if (random === 2) {
+      props.setHousePick('img2');
+    } else {
+      props.setHousePick('img3');
     }
 
     console.log('pickedByUser: ', pickedByUser);
+    console.log('props.userPick', props.userPick)
     console.log('random: ', random);
   };
 
@@ -59,7 +72,9 @@ const Game = (props) => {
 
       {props.startGame && (
         <main className={classes.game__result__container}>
-          <GameResult userPick={props.userPick} gameResult="YOU WIN" />
+         <GameResult
+            
+         />
         </main>
       )}
     </Fragment>

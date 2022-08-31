@@ -1,3 +1,12 @@
 .picks__container {
-  margin-bottom: 5rem;
+  margin: 3.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.picks__container h3 {
+  font-size: 0.8rem;
+  letter-spacing: 1.7px;
+  margin-top: 1.8rem;
 }
