@@ -1,4 +1,5 @@
-.game__container {
+.game__start__container,
+.game__result__container {
   width: 85%;
   display: flex;
   flex-wrap: wrap;
@@ -10,6 +11,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 50%;
+}
+
+.game__result__container {
+  background-image: none;
 }
 
 @media only screen and (min-width: 768px) {
