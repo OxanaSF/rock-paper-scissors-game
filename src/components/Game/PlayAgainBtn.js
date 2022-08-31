@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import classes from './PlayAgainBtn.module.css';
 
-const PlayAgainBtn = () => {
+const PlayAgainBtn = (props) => {
   return (
     <Link to='/'>
       <button className={classes.play__again_btn}>
