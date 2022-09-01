@@ -1,21 +1,28 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import Picks from './Picks';
 import WinnerAnnouncement from './WinnerAnnouncement';
 import PlayAgainBtn from './PlayAgainBtn';
 import classes from './GameResult.module.css';
 
+import { userScoreActions } from '../../store/index';
+import { houseScoreActions } from '../../store/index';
+
 const GameResult = (props) => {
+
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
   const {
-    setUserScore,
+ 
     userPick,
     housePick,
     gameResult,
     setGameResult,
-    setHouseScore,
+
   } = props;
 
   useEffect(() => {
@@ -29,18 +36,16 @@ const GameResult = (props) => {
       (userPick === 'img3' && housePick === 'img2')
     ) {
       setTimeout(() => {
-        setUserScore((prevScore) => prevScore + 1);
+        dispatch(userScoreActions.increment());
       }, 2000);
-
       setGameResult('YOU WIN');
-      return;
     } else if (
       (userPick === 'img1' && housePick === 'img2') ||
       (userPick === 'img2' && housePick === 'img3') ||
       (userPick === 'img3' && housePick === 'img1')
     ) {
       setTimeout(() => {
-        setHouseScore((prevScore) => prevScore + 1);
+        dispatch(houseScoreActions.increment());
       }, 2000);
 
       setGameResult('YOU LOSE');
@@ -59,8 +64,8 @@ const GameResult = (props) => {
     // gameResult,
     navigate,
     setGameResult,
-    setHouseScore,
-    setUserScore,
+
+    dispatch,
   ]);
 
   return (

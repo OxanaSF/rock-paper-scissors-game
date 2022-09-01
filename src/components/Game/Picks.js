@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from "framer-motion";
 
 import GameStartItem from './GameStartItem';
 import classes from './Picks.module.css';
