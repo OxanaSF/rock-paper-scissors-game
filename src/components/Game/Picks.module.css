@@ -1,5 +1,5 @@
 .picks__container {
-  margin: 3.5rem 0;
+  margin: 3rem 0;
   display: flex;
   justify-content: space-between;
   gap: 3rem;
@@ -11,6 +11,31 @@
   margin-top: 1.8rem;
 }
 
-/* .house__pick {
-  visibility: hidden;
-} */
+.house__pick {
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 2s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

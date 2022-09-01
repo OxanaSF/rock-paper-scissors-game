@@ -11,7 +11,7 @@ function App() {
   const [startGame, setStartGame] = useState(false);
   const [userPick, setUserPick] = useState('');
   const [housePick, setHousePick] = useState('');
-  const [gameResult, setGameResult] = useState('');
+  const [gameResult, setGameResult] = useState('Initial');
   
 
   return (

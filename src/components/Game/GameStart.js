@@ -1,13 +1,11 @@
-import React, { useRef, Fragment, useEffect } from 'react';
+import React, { useRef, Fragment } from 'react';
 
 import GameStartItem from './GameStartItem';
-// import GameResult from './GameResult';
 import classes from './GameStart.module.css';
 import { ROCK_PAPER_SCISSORS_ICONS } from '../../utils/rock_paper_scissors_icons';
-import GameResult from './GameResult';
 
 const Game = (props) => {
-  let icon = useRef(null);
+  const icon = useRef(null);
 
   const gameResultsHandler = (event) => {
     if (!event.currentTarget.id) {
@@ -28,6 +26,7 @@ const Game = (props) => {
       props.setHousePick('img3');
     }
   };
+  
 
   return (
     <Fragment>
@@ -43,16 +42,9 @@ const Game = (props) => {
                 alt={item.alt}
                 ref={icon}
                 onClick={gameResultsHandler}
-                gameResult={props.gameResult}
               />
             </div>
           ))}
-        </main>
-      )}
-
-      {props.startGame && (
-        <main className={classes.game__result__container}>
-          <GameResult />
         </main>
       )}
     </Fragment>
