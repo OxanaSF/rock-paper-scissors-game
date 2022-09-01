@@ -6,8 +6,8 @@
   margin-bottom: 2rem;
 
   font-size: 3.6rem;
-  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
-  animation: 5s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 4s ease 0s normal forwards 1 fadein;
+  animation: 4s ease 0s normal forwards 1 fadein;
 }
 
 .play__again_btn h1 {
@@ -19,18 +19,6 @@
 }
 
 @keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadein {
   0% {
     opacity: 0;
   }

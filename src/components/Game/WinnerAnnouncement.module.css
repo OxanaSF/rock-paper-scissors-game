@@ -1,7 +1,7 @@
 .winner__announcement__container h1 {
   font-size: 3.6rem;
-  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
-  animation: 5s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 4s ease 0s normal forwards 1 fadein;
+  animation: 4s ease 0s normal forwards 1 fadein;
 }
 
 @keyframes fadein {
@@ -16,14 +16,4 @@
   }
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+

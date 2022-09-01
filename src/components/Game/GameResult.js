@@ -29,14 +29,22 @@ const GameResult = (props) => {
       (userPick === 'img3' && housePick === 'img2')
     ) {
       setGameResult('YOU WIN');
-      setUserScore((prevScore) => prevScore + 1);
+
+      setTimeout(() => {
+        setUserScore((prevScore) => prevScore + 1);
+      }, 2000);
     } else if (
       (userPick === 'img1' && housePick === 'img2') ||
       (userPick === 'img2' && housePick === 'img3') ||
       (userPick === 'img3' && housePick === 'img1')
     ) {
       setGameResult('YOU LOSE');
-      setHouseScore((prevScore) => prevScore + 1);
+
+      setTimeout(() => {
+        setHouseScore((prevScore) => prevScore + 1);
+      }, 2000);
+
+  
     } else {
       props.setGameResult('DRAW');
     }
@@ -46,7 +54,7 @@ const GameResult = (props) => {
     console.log('random: ', housePick);
     console.log('props.housePick', housePick);
     console.log('props.GAME___RESULTS 111111', gameResult);
-  }, [userPick, housePick, gameResult, navigate]);
+  }, [userPick, housePick, gameResult, navigate, setGameResult, setHouseScore, setUserScore]);
 
   return (
     <section className={classes.game__result__container}>
