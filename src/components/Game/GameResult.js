@@ -8,45 +8,51 @@ import classes from './GameResult.module.css';
 
 const GameResult = (props) => {
   const navigate = useNavigate();
-  useEffect(() => {
-    console.log('props.GAME___RESULTS', props.gameResult);
-  });
+
+  const {
+    setUserScore,
+    userPick,
+    housePick,
+    gameResult,
+    setGameResult,
+    setHouseScore,
+  } = props;
 
   useEffect(() => {
-    if (!props.userPick || !props.housePick) {
+    if (!userPick || !housePick) {
       navigate('/');
     }
 
-    const pickedByUserNumber = props.userPick.slice(-1) * 1;
-
-    if (pickedByUserNumber === props.housePick) {
+    if (
+      (userPick === 'img1' && housePick === 'img3') ||
+      (userPick === 'img2' && housePick === 'img1') ||
+      (userPick === 'img3' && housePick === 'img2')
+    ) {
+      setGameResult('YOU WIN');
+      setUserScore((prevScore) => prevScore + 1);
+    } else if (
+      (userPick === 'img1' && housePick === 'img2') ||
+      (userPick === 'img2' && housePick === 'img3') ||
+      (userPick === 'img3' && housePick === 'img1')
+    ) {
+      setGameResult('YOU LOSE');
+      setHouseScore((prevScore) => prevScore + 1);
+    } else {
       props.setGameResult('DRAW');
-    } else if (
-      (props.userPick === 'img1' && props.housePick === 3) ||
-      (props.userPick === 'img2' && props.housePick === 1) ||
-      (props.userPick === 'img3' && props.housePick === 2)
-    ) {
-      props.setGameResult('YOU WIN');
-    } else if (
-      (props.userPick === 'img1' && props.housePick === 2) ||
-      (props.userPick === 'img2' && props.housePick === 3) ||
-      (props.userPick === 'img3' && props.housePick === 1)
-    ) {
-      props.setGameResult('YOU LOSE');
     }
 
-    console.log('pickedByUser: ', props.userPick);
-    console.log('props.userPick', props.userPick);
-    console.log('random: ', props.housePick);
-    console.log('props.housePick', props.housePick);
-    console.log('props.GAME___RESULTS', props.gameResult);
-  }, [props.userPick, props.housePick]);
+    console.log('pickedByUser: ', userPick);
+    console.log('props.userPick', userPick);
+    console.log('random: ', housePick);
+    console.log('props.housePick', housePick);
+    console.log('props.GAME___RESULTS 111111', gameResult);
+  }, [userPick, housePick, gameResult, navigate]);
 
   return (
     <section className={classes.game__result__container}>
-      <Picks userPick={props.userPick} housePick={props.housePick} />
+      <Picks userPick={userPick} housePick={housePick} />
 
-      <WinnerAnnouncement gameResult={props.gameResult} />
+      <WinnerAnnouncement gameResult={gameResult} />
 
       <PlayAgainBtn />
     </section>

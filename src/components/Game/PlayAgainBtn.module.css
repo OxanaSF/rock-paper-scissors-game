@@ -3,6 +3,10 @@
   height: 3.3rem;
   border-radius: 0.5rem;
   border: none;
+
+  font-size: 3.6rem;
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 5s ease 0s normal forwards 1 fadein;
 }
 
 .play__again_btn h1 {
@@ -11,4 +15,28 @@
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: 2px;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

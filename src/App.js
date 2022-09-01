@@ -12,12 +12,18 @@ function App() {
   const [userPick, setUserPick] = useState('');
   const [housePick, setHousePick] = useState('');
   const [gameResult, setGameResult] = useState('Initial');
-  
+  const [userScore, setUserScore] = useState(0);
+  const [houseScore, setHouseScore] = useState(0);
 
   return (
     <BrowserRouter>
       <MainLayout>
-        <Header />
+        <Header
+          userScore={userScore}
+          setUserScore={setUserScore}
+          houseScore={houseScore}
+          setHouseScore={setHouseScore}
+        />
 
         <Routes>
           <Route
@@ -41,8 +47,14 @@ function App() {
             element={
               <GameResult
                 gameResult={gameResult}
+                setGameResult={setGameResult}
                 userPick={userPick}
                 housePick={housePick}
+                userScore={userScore}
+                setUserScore={setUserScore}
+                houseScore={houseScore}
+                setHouseScore={setHouseScore}
+
               />
             }
           />

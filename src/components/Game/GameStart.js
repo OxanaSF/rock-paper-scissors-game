@@ -1,4 +1,4 @@
-import React, { useRef, Fragment } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import GameStartItem from './GameStartItem';
 import classes from './GameStart.module.css';
@@ -26,28 +26,27 @@ const Game = (props) => {
       props.setHousePick('img3');
     }
   };
-  
+
+  useEffect(()=> {
+    
+  })
 
   return (
-    <Fragment>
-      {!props.startGame && (
-        <main className={classes.game__start__container}>
-          {ROCK_PAPER_SCISSORS_ICONS.map((item) => (
-            <div key={item.id}>
-              <GameStartItem
-                id={item.id}
-                containerCSSClass={item.containerCSSClass}
-                itemCSSClass={item.itemCSSClass}
-                url={item.url}
-                alt={item.alt}
-                ref={icon}
-                onClick={gameResultsHandler}
-              />
-            </div>
-          ))}
-        </main>
-      )}
-    </Fragment>
+    <main className={classes.game__start__container}>
+      {ROCK_PAPER_SCISSORS_ICONS.map((item) => (
+        <div key={item.id}>
+          <GameStartItem
+            id={item.id}
+            containerCSSClass={item.containerCSSClass}
+            itemCSSClass={item.itemCSSClass}
+            url={item.url}
+            alt={item.alt}
+            ref={icon}
+            onClick={gameResultsHandler}
+          />
+        </div>
+      ))}
+    </main>
   );
 };
 

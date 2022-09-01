@@ -4,7 +4,7 @@ import Card from '../UI/Card';
 import ScoreContainer from './ScoreContainer'
 import classes from './Header.module.css';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Card>
       <header className={classes.header}>
@@ -13,7 +13,12 @@ const Header = () => {
           <h2>PAPER</h2>
           <h2>SCISSORS</h2>
         </div>
-        <ScoreContainer />
+        <ScoreContainer 
+           userScore={props.userScore}
+           setUserScore={props.setUserScore}
+           houseScore={props.houseScore}
+           setHouseScore={props.setHouseScore}
+        />
       </header>
     </Card>
   );

@@ -17,9 +17,42 @@
   background-image: none;
 }
 
-@media only screen and (min-width: 768px) {
-  .game__container {
+@media only screen and (min-width: 600px) {
+  .game__start__container {
+    width: 85%;
+    gap: 5rem;
+  }
+}
+
+@media only screen and (min-width: 690px) {
+  .game__start__container {
+    width: 80%;
+    gap: 5rem;
+  }
+}
+
+@media only screen and (min-width: 738px) {
+  .game__start__container {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1066px) {
+  .game__start__container {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1405px) {
+  .game__start__container {
     width: 40%;
+    gap: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1766px) {
+  .game__start__container {
+    width: 30%;
     gap: 5rem;
   }
 }
