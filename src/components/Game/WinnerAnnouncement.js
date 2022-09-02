@@ -1,12 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import classes from './WinnerAnnouncement.module.css';
 
 const WinnerAnnouncement = (props) => {
+  const gameResult = useSelector((state) => state.gameResult.gameResult);
 
   return (
     <div className={classes.winner__announcement__container}>
-      <h1>{props.gameResult}</h1>
+      <h1>{gameResult}</h1>
     </div>
   );
 };

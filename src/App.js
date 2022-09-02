@@ -8,44 +8,14 @@ import Rules from './components/Rules/Rules';
 import GameResult from './components/Game/GameResult';
 
 function App() {
-  const [startGame, setStartGame] = useState(false);
-  const [userPick, setUserPick] = useState('');
-  const [housePick, setHousePick] = useState('');
-  const [gameResult, setGameResult] = useState('Initial');
-
   return (
     <BrowserRouter>
       <MainLayout>
         <Header />
 
         <Routes>
-          <Route
-            path="/"
-            element={
-              <GameStart
-                startGame={startGame}
-                setStartGame={setStartGame}
-                gameResult={gameResult}
-                setGameResult={setGameResult}
-                userPick={userPick}
-                setUserPick={setUserPick}
-                housePick={housePick}
-                setHousePick={setHousePick}
-              />
-            }
-          />
-
-          <Route
-            path="/game-result"
-            element={
-              <GameResult
-                gameResult={gameResult}
-                setGameResult={setGameResult}
-                userPick={userPick}
-                housePick={housePick}
-              />
-            }
-          />
+          <Route path="/" element={<GameStart />} />
+          <Route path="/game-result" element={<GameResult />} />
         </Routes>
 
         <Rules />

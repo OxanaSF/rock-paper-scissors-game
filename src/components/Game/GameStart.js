@@ -1,10 +1,16 @@
 import React, { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 
 import GameStartItem from './GameStartItem';
 import classes from './GameStart.module.css';
 import { ROCK_PAPER_SCISSORS_ICONS } from '../../utils/rock_paper_scissors_icons';
 
+import { userPickActions } from '../../store/user-pick-slice';
+import { housePickActions } from '../../store/house-pick-slice';
+
 const Game = (props) => {
+  const dispatch = useDispatch();
+
   const icon = useRef(null);
 
   const gameResultsHandler = (event) => {
@@ -13,23 +19,19 @@ const Game = (props) => {
     }
     const pickedByUser = event.currentTarget.id;
 
-    props.setUserPick(pickedByUser);
+    dispatch(userPickActions.userPickUpdate(pickedByUser));
 
     const random =
       Math.floor(Math.random() * ROCK_PAPER_SCISSORS_ICONS.length) + 1;
 
     if (random === 1) {
-      props.setHousePick('img1');
+      dispatch(housePickActions.housePickUpdate('img1'));
     } else if (random === 2) {
-      props.setHousePick('img2');
+      dispatch(housePickActions.housePickUpdate('img2'));
     } else {
-      props.setHousePick('img3');
+      dispatch(housePickActions.housePickUpdate('img3'));
     }
   };
-
-  useEffect(()=> {
-    
-  })
 
   return (
     <main className={classes.game__start__container}>
