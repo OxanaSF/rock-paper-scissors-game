@@ -7,8 +7,8 @@ import WinnerAnnouncement from './WinnerAnnouncement';
 import PlayAgainBtn from './PlayAgainBtn';
 import classes from './GameResult.module.css';
 
-import { userScoreActions } from '../../store/index';
-import { houseScoreActions } from '../../store/index';
+import { userScoreActions } from '../../store/user-score-slice'
+import { houseScoreActions } from '../../store/house-score-slice';
 
 const GameResult = (props) => {
 
