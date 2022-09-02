@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import MainLayout from './components/Layout/MainLayout';
@@ -8,8 +8,6 @@ import Rules from './components/Rules/Rules';
 import GameResult from './components/Game/GameResult';
 
 function App() {
-  const [colorChange, setColorChange ] = useState(true)
-
   return (
     <BrowserRouter>
       <MainLayout>
@@ -17,10 +15,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<GameStart />} />
-          <Route path="/game-result" element={<GameResult 
-          colorChange={colorChange}
-          setColorChange={setColorChange}
-          />} />
+          <Route path="/game-result" element={<GameResult />} />
         </Routes>
 
         <Rules />

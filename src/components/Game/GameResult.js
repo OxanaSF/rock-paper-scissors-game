@@ -11,6 +11,7 @@ import classes from './GameResult.module.css';
 import { userScoreActions } from '../../store/user-score-slice';
 import { houseScoreActions } from '../../store/house-score-slice';
 import { gameResultActions } from '../../store/game-result-slice';
+import { placeholderStyleActions } from '../../store/placeholder-style-slice';
 
 const GameResult = (props) => {
   const userPick = useSelector((state) => state.userPick.userPick);
@@ -25,6 +26,8 @@ const GameResult = (props) => {
       navigate('/');
     }
 
+    dispatch(placeholderStyleActions.activate());
+
     if (
       (userPick === 'img1' && housePick === 'img3') ||
       (userPick === 'img2' && housePick === 'img1') ||
@@ -32,7 +35,8 @@ const GameResult = (props) => {
     ) {
       setTimeout(() => {
         dispatch(userScoreActions.increment());
-        props.setColorChange(false);
+        dispatch(placeholderStyleActions.deactivate());
+        console.log('TEST!!!');
       }, 2000);
 
       dispatch(gameResultActions.winnerStateUpdate('YOU WIN'));
@@ -43,7 +47,8 @@ const GameResult = (props) => {
     ) {
       setTimeout(() => {
         dispatch(houseScoreActions.increment());
-        props.setColorChange(false);
+        dispatch(placeholderStyleActions.deactivate());
+        console.log('TEST!!!');
       }, 2000);
 
       dispatch(gameResultActions.winnerStateUpdate('YOU LOSE'));
@@ -59,10 +64,7 @@ const GameResult = (props) => {
 
   return (
     <section className={classes.game__result__container}>
-      <Picks
-        colorChange={props.colorChange}
-        setColorChange={props.setColorChange}
-      />
+      <Picks />
       <WinnerAnnouncement />
       <PlayAgainBtn />
     </section>
