@@ -25,6 +25,10 @@
   visibility: hidden;
 }
 
+.modal__close img {
+  visibility: hidden;
+}
+
 @media only screen and (min-width: 768px) {
   .modal__overlay {
     /* background: none; */
@@ -74,5 +78,6 @@
   .modal__close img {
     width: 1.2rem;
     height: 1.2rem;
+    visibility: hidden;
   }
 }
