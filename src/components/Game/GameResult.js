@@ -32,6 +32,7 @@ const GameResult = (props) => {
     ) {
       setTimeout(() => {
         dispatch(userScoreActions.increment());
+        props.setColorChange(false);
       }, 2000);
 
       dispatch(gameResultActions.winnerStateUpdate('YOU WIN'));
@@ -42,6 +43,7 @@ const GameResult = (props) => {
     ) {
       setTimeout(() => {
         dispatch(houseScoreActions.increment());
+        props.setColorChange(false);
       }, 2000);
 
       dispatch(gameResultActions.winnerStateUpdate('YOU LOSE'));
@@ -53,11 +55,14 @@ const GameResult = (props) => {
     console.log('props.userPick', userPick);
     console.log('random: ', housePick);
     console.log('props.housePick', housePick);
-  }, [navigate, dispatch]);
+  }, [navigate, dispatch, housePick, userPick]);
 
   return (
     <section className={classes.game__result__container}>
-      <Picks />
+      <Picks
+        colorChange={props.colorChange}
+        setColorChange={props.setColorChange}
+      />
       <WinnerAnnouncement />
       <PlayAgainBtn />
     </section>

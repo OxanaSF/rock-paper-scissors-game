@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# [rock-paper-scissors-game](https://play-rock-paper-scissors-react.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  <!-- - [The challenge](#the-challenge) -->
+  - [Links](#links)
+  - [Design](#designs)
+  - [Screenshots](#screenshots)
+- [Our process](#our-process)
+  - [What We Learned](#what-we-learned)
 
-In the project directory, you can run:
+## Author
 
-### `npm start`
+- **Oxana Howard - Software Engineer**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - [Website](https://oxana-howard.com/)
+  - [LinkedIn](https://www.linkedin.com/in/oxana-howard/)
+  - [Github](https://github.com/OxanaSF)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+This is a desktop and mobile version website as a result of challenge offered by Frontend Mentor (https://www.frontendmentor.io/). The challenge was to build out a Rock, Paper, Scissors game and get it looking as close to the offered design as possible.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The challenge
 
-### `npm run build`
+- Develop a website in a team environment. Use a Content Management System (CMS), to keep track of all activity and assigned work.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Designs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The deign could be seen here: (https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Links
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Repository URL: [https://github.com/OxanaSF/rock-paper-scissors-game](https://github.com/OxanaSF/rock-paper-scissors-game)
+- Live Site URL: [https://play-rock-paper-scissors-react.netlify.app/](https://play-rock-paper-scissors-react.netlify.app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Process
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Frontend**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Semantic HTML5 markup
+- CSS modules
+- CSS Flex Box
+- [React](https://reactjs.org/)
+- [React-Redux](https://redux.js.org/usage/)
+- [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
+- [Netlify](https://www.netlify.com/)
+- [CSS modules](https://github.com/css-modules/css-modules)
 
-## Learn More
+### What I learned
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In this project I got to practice realization of Presentational components in React because in previous projects I focused on Stateful components solely. Another big outcome from this project was applying Redux to manage all states in the project. Even though it was over killing, the purpose was to practice Redux as much as possible.

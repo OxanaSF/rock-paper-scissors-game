@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { forwardRef } from 'react';
 
-import './GameStartItem.css';
+import './GameItem.css';
 
 const GameStartItem = forwardRef((props, ref) => {
   return (

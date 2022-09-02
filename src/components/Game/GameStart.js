@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 
-import GameStartItem from './GameStartItem';
+import GameItem from './GameItem';
 import classes from './GameStart.module.css';
 import { ROCK_PAPER_SCISSORS_ICONS } from '../../utils/rock_paper_scissors_icons';
 
@@ -37,7 +37,7 @@ const Game = (props) => {
     <main className={classes.game__start__container}>
       {ROCK_PAPER_SCISSORS_ICONS.map((item) => (
         <div key={item.id}>
-          <GameStartItem
+          <GameItem
             id={item.id}
             containerCSSClass={item.containerCSSClass}
             itemCSSClass={item.itemCSSClass}

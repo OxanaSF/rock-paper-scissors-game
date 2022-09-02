@@ -9,6 +9,22 @@
   background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 }
 
+.game__border__placeholder {
+  background-image: none;
+}
+
+.game__container__placeholder {
+  background-color: hsl(237, 49%, 15%);
+  opacity: 0.3;
+  padding: 2.3rem;
+  border-radius: 50%;
+  margin-top: 0.8rem;
+}
+
+.game__container__placeholder img {
+  visibility: hidden;
+}
+
 .game__scissors__border {
   background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }

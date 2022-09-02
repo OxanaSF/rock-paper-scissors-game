@@ -8,6 +8,8 @@ import Rules from './components/Rules/Rules';
 import GameResult from './components/Game/GameResult';
 
 function App() {
+  const [colorChange, setColorChange ] = useState(true)
+
   return (
     <BrowserRouter>
       <MainLayout>
@@ -15,7 +17,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<GameStart />} />
-          <Route path="/game-result" element={<GameResult />} />
+          <Route path="/game-result" element={<GameResult 
+          colorChange={colorChange}
+          setColorChange={setColorChange}
+          />} />
         </Routes>
 
         <Rules />

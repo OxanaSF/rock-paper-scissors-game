@@ -20,4 +20,5 @@ export const ROCK_PAPER_SCISSORS_ICONS = [
       url: 'icon-rock.svg',
       alt: 'rock',
     },
+    
   ];
