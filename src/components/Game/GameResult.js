@@ -17,13 +17,13 @@ const GameResult = () => {
   const userPick = useSelector((state) => state.userPick.userPick);
   const housePick = useSelector((state) => state.housePick.housePick);
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    let timerOne 
-    let timerTwo 
+    // let timerOne 
+    // let timerTwo 
 
     if (!userPick || !housePick) {
       navigate('/');
