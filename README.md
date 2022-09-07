@@ -38,12 +38,13 @@ The deign could be seen here: (https://www.frontendmentor.io/challenges/rock-pap
     <td><b>Mobile</td>     
   </tr>
   <tr>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036015-a580da45-4264-45c2-b31c-eb9610e89e94.png" width="300" /></td>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036089-3016abe7-ecab-46ce-9c0b-e6f8160d233f.png" width="300" /></td>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036104-e38e722d-6d42-497e-8420-32f30f41ecce.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974670-a82ee541-f75b-4af9-a8b7-7095a55348cd.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974759-c188b86b-53b7-439f-9c3b-d1823760ef50.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974859-153c1174-3400-4948-8d72-3b0338a1e5f8.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974952-cb1391d4-4547-40af-97fc-93ae44616937.png" width="300" /></td>
   </tr>
-  
-  
+
+
   
   <tr>
     <td><b>Desctop</td>
