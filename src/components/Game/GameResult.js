@@ -17,9 +17,9 @@ const GameResult = () => {
   const userPick = useSelector((state) => state.userPick.userPick);
   const housePick = useSelector((state) => state.housePick.housePick);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     let timerOne 
@@ -36,7 +36,7 @@ const GameResult = () => {
       (userPick === 'img2' && housePick === 'img1') ||
       (userPick === 'img3' && housePick === 'img2')
     ) {
-      timerOne = setTimeout(() => {
+    setTimeout(() => {
         dispatch(userScoreActions.increment());
         dispatch(placeholderStyleActions.deactivate());
       }, 2000);
@@ -48,7 +48,7 @@ const GameResult = () => {
       (userPick === 'img2' && housePick === 'img3') ||
       (userPick === 'img3' && housePick === 'img1')
     ) {
-      timerTwo = setTimeout(() => {
+       setTimeout(() => {
         dispatch(houseScoreActions.increment());
         dispatch(placeholderStyleActions.deactivate());
       }, 2000);
@@ -66,8 +66,8 @@ const GameResult = () => {
     console.log('props.housePick', housePick);
 
 
-      clearTimeout(timerOne)
-      clearTimeout(timerTwo)
+      // clearTimeout(timerOne)
+      // clearTimeout(timerTwo)
 
     
   }, [navigate, dispatch, housePick, userPick]);
