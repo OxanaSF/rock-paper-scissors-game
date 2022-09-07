@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Card from '../UI/Card';
-import ScoreContainer from './ScoreContainer'
+import ScoreContainer from './ScoreContainer';
 import classes from './Header.module.css';
 
 const Header = (props) => {
@@ -13,12 +13,7 @@ const Header = (props) => {
           <h2>PAPER</h2>
           <h2>SCISSORS</h2>
         </div>
-        <ScoreContainer 
-           userScore={props.userScore}
-           setUserScore={props.setUserScore}
-           houseScore={props.houseScore}
-           setHouseScore={props.setHouseScore}
-        />
+        <ScoreContainer />
       </header>
     </Card>
   );

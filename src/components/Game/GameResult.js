@@ -13,7 +13,7 @@ import { houseScoreActions } from '../../store/house-score-slice';
 import { gameResultActions } from '../../store/game-result-slice';
 import { placeholderStyleActions } from '../../store/placeholder-style-slice';
 
-const GameResult = (props) => {
+const GameResult = () => {
   const userPick = useSelector((state) => state.userPick.userPick);
   const housePick = useSelector((state) => state.housePick.housePick);
 
@@ -22,6 +22,9 @@ const GameResult = (props) => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    let timerOne 
+    let timerTwo 
+
     if (!userPick || !housePick) {
       navigate('/');
     }
@@ -33,11 +36,11 @@ const GameResult = (props) => {
       (userPick === 'img2' && housePick === 'img1') ||
       (userPick === 'img3' && housePick === 'img2')
     ) {
-      setTimeout(() => {
+      timerOne = setTimeout(() => {
         dispatch(userScoreActions.increment());
         dispatch(placeholderStyleActions.deactivate());
-        console.log('TEST!!!');
       }, 2000);
+
 
       dispatch(gameResultActions.winnerStateUpdate('YOU WIN'));
     } else if (
@@ -45,28 +48,38 @@ const GameResult = (props) => {
       (userPick === 'img2' && housePick === 'img3') ||
       (userPick === 'img3' && housePick === 'img1')
     ) {
-      setTimeout(() => {
+      timerTwo = setTimeout(() => {
         dispatch(houseScoreActions.increment());
         dispatch(placeholderStyleActions.deactivate());
-        console.log('TEST!!!');
       }, 2000);
+
 
       dispatch(gameResultActions.winnerStateUpdate('YOU LOSE'));
     } else {
       dispatch(gameResultActions.winnerStateUpdate('DRAW'));
+      dispatch(placeholderStyleActions.deactivate());
     }
 
     console.log('pickedByUser: ', userPick);
     console.log('props.userPick', userPick);
     console.log('random: ', housePick);
     console.log('props.housePick', housePick);
+
+
+      clearTimeout(timerOne)
+      clearTimeout(timerTwo)
+
+    
   }, [navigate, dispatch, housePick, userPick]);
 
   return (
     <section className={classes.game__result__container}>
-      <Picks />
-      <WinnerAnnouncement />
-      <PlayAgainBtn />
+      <Picks className={classes.game__result__icons} />
+
+      <div className={classes.game__result__text}>
+        <WinnerAnnouncement />
+        <PlayAgainBtn className={classes.play__btn} />
+      </div>
     </section>
   );
 };

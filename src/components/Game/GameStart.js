@@ -8,7 +8,7 @@ import { ROCK_PAPER_SCISSORS_ICONS } from '../../utils/rock_paper_scissors_icons
 import { userPickActions } from '../../store/user-pick-slice';
 import { housePickActions } from '../../store/house-pick-slice';
 
-const Game = (props) => {
+const Game = () => {
   const dispatch = useDispatch();
 
   const icon = useRef(null);

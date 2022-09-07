@@ -5,14 +5,14 @@ import GameItem from './GameItem';
 import classes from './Picks.module.css';
 import { ROCK_PAPER_SCISSORS_ICONS } from '../../utils/rock_paper_scissors_icons';
 
-const Picks = (props) => {
+const Picks = () => {
   const userPick = useSelector((state) => state.userPick.userPick);
   const housePick = useSelector((state) => state.housePick.housePick);
   const placeholderStyle = useSelector((state) => state.placeholderStyle.placeholderStyle);
 
   return (
     <div className={classes.picks__container}>
-      <div>
+      <div className={classes.picks__item}>
         {ROCK_PAPER_SCISSORS_ICONS.filter((item) => item.id === userPick).map(
           (icon) => (
             <div key={icon.id}>

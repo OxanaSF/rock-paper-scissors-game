@@ -5,6 +5,11 @@
   gap: 3rem;
 }
 
+.picks__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .picks__container h3 {
   font-size: 0.8rem;
   letter-spacing: 1.7px;
@@ -12,6 +17,8 @@
 }
 
 .house__pick {
+  display: flex;
+  flex-direction: column;
   -webkit-animation: 2s ease 0s normal forwards 1 fadein;
   animation: 2s ease 0s normal forwards 1 fadein;
 }
@@ -37,5 +44,21 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .picks__item,
+  .house__pick {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+
+  .picks__container {
+    gap: 5rem;
+  }
+
+  .picks__container h3 {
+    font-size: 1.2rem;
   }
 }

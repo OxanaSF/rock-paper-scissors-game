@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import classes from './WinnerAnnouncement.module.css';
 
-const WinnerAnnouncement = (props) => {
+const WinnerAnnouncement = () => {
   const gameResult = useSelector((state) => state.gameResult.gameResult);
 
   return (
