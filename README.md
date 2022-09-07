@@ -42,14 +42,32 @@ The deign could be seen here: (https://www.frontendmentor.io/challenges/rock-pap
     <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036089-3016abe7-ecab-46ce-9c0b-e6f8160d233f.png" width="300" /></td>
     <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036104-e38e722d-6d42-497e-8420-32f30f41ecce.png" width="300" /></td>
   </tr>
+  
+  
+  
   <tr>
     <td><b>Desctop</td>
   </tr>
   <tr>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036104-e38e722d-6d42-497e-8420-32f30f41ecce.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188973883-f270bdcc-0443-4d7b-ae82-70cbdf69bf16.png" width="300" /></td>
+  </tr>
+  
+   <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974003-511005e9-5073-4f16-b3e3-0f61e30575d6.png" width="300" /></td>
+  </tr>
+  
+   <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974094-06871ff0-40f4-4baa-a704-f1e881bfbd1d.png" width="300" /></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974185-ff2f38e7-9b2f-4c89-b803-8f489479630a.png" width="300" /></td>
   </tr>
  
  </table>
+
+
+
 
 
 ### Links
