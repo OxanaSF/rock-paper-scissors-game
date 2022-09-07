@@ -38,10 +38,10 @@ The deign could be seen here: (https://www.frontendmentor.io/challenges/rock-pap
     <td><b>Mobile</td>     
   </tr>
   <tr>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974670-a82ee541-f75b-4af9-a8b7-7095a55348cd.png" width="180" height="300" /></td>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974759-c188b86b-53b7-439f-9c3b-d1823760ef50.png" width="180" height="300"/></td>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974859-153c1174-3400-4948-8d72-3b0338a1e5f8.png" width="180" height="300"/></td>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974952-cb1391d4-4547-40af-97fc-93ae44616937.png" width="180" height="300"/></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974670-a82ee541-f75b-4af9-a8b7-7095a55348cd.png" width="180" height="300"  align="center" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974759-c188b86b-53b7-439f-9c3b-d1823760ef50.png" width="180" height="300"  align="center"/></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974859-153c1174-3400-4948-8d72-3b0338a1e5f8.png" width="180" height="300"  align="center"/></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188974952-cb1391d4-4547-40af-97fc-93ae44616937.png" width="180" height="300"  align="center"/></td>
   </tr>
 
 
