@@ -22,8 +22,9 @@ const GameResult = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // let timerOne 
-    // let timerTwo 
+
+    let timerOne
+    let timerTwo
 
     if (!userPick || !housePick) {
       navigate('/');
@@ -36,10 +37,11 @@ const GameResult = () => {
       (userPick === 'img2' && housePick === 'img1') ||
       (userPick === 'img3' && housePick === 'img2')
     ) {
-    setTimeout(() => {
+    timerOne = setTimeout(() => {
         dispatch(userScoreActions.increment());
         dispatch(placeholderStyleActions.deactivate());
       }, 2000);
+       
 
 
       dispatch(gameResultActions.winnerStateUpdate('YOU WIN'));
@@ -48,10 +50,14 @@ const GameResult = () => {
       (userPick === 'img2' && housePick === 'img3') ||
       (userPick === 'img3' && housePick === 'img1')
     ) {
-       setTimeout(() => {
+       timerTwo = setTimeout(() => {
         dispatch(houseScoreActions.increment());
         dispatch(placeholderStyleActions.deactivate());
       }, 2000);
+   
+
+   
+       
 
 
       dispatch(gameResultActions.winnerStateUpdate('YOU LOSE'));
@@ -66,9 +72,11 @@ const GameResult = () => {
     console.log('props.housePick', housePick);
 
 
-      // clearTimeout(timerOne)
-      // clearTimeout(timerTwo)
-
+ 
+    return () => {
+      clearTimeout(timerOne)
+      clearTimeout(timerTwo)
+    }
     
   }, [navigate, dispatch, housePick, userPick]);
 
